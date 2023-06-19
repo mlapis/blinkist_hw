@@ -99,6 +99,9 @@
         >
       </li>
     </ul>
+    <ul>
+      <li v-for="block in blocks" :key="block.id">{{ block.variants[0] }}</li>
+    </ul>
   </div>
 </template>
 
@@ -107,8 +110,30 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "HelloWorld",
+  data() {
+    return {
+      blocks: [],
+    };
+  },
   props: {
     msg: String,
+  },
+  async created() {
+    await this.fetchData();
+    this.$cookie.set("CookieName", "CookieValue");
+  },
+  methods: {
+    async fetchData() {
+      try {
+        const response = await fetch("http://localhost:3000/blocks");
+        if (!response.ok) {
+          throw new Error("Error fetching data");
+        }
+        this.blocks = await response.json();
+      } catch (error) {
+        console.error(error);
+      }
+    },
   },
 });
 </script>

@@ -1,0 +1,34 @@
+{ 
+  "blocks": [
+    { 
+      "variants": [ 
+      "Text 1A",
+      "Text 1B",
+      "Text 1C"
+      ],
+    "chances": 
+      [10,10,80],
+    "id": 1
+    },
+    { 
+      "variants": [ 
+      "Text 2A",
+      "Text 2B"
+      ],
+    "chances": 
+      [10,90],
+    "id": 2
+    },
+    { 
+      "variants": [ 
+      "Text 3A",
+      "Text 3B",
+      "Text 3C",
+      "Text 4D"
+      ],
+    "chances": 
+      [10,10,30,50],
+    "id": 3
+    }
+  ]
+}
