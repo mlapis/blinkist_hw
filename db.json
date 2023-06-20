@@ -1,34 +1,33 @@
-{ 
+{
   "blocks": [
-    { 
-      "variants": [ 
-      "Text 1A",
-      "Text 1B",
-      "Text 1C"
+    {
+      "variants": [
+        "<h1>Check out the Blinkist app, Text 1A</h1>",
+        "<h1>Check out the Blinkist app, Text 1B</h1>",
+        "<h1>Check out the Blinkist app, Text 1C</h1>"
       ],
-    "chances": 
-      [10,10,80],
-    "id": 1
+      "chances": [10, 10, 80],
+      "id": 1
     },
-    { 
-      "variants": [ 
-      "Text 2A",
-      "Text 2B"
-      ],
-    "chances": 
-      [10,90],
-    "id": 2
+    {
+      "variants": ["Text 2A", "Text 2B"],
+      "chances": [10, 90],
+      "id": 2
     },
-    { 
-      "variants": [ 
-      "Text 3A",
-      "Text 3B",
-      "Text 3C",
-      "Text 4D"
+    {
+      "variants": ["<p>Only one variant here</p>"],
+      "chances": [100],
+      "id": 3
+    },
+    {
+      "variants": [
+        "<a href=\"#\" onClick=\"console.log('test')\">SIGN UP</a> Text 3A",
+        "<a href=\"#\" onClick=\"console.log('test')\">SIGN UP</a> Text 3B",
+        "<a href=\"#\" onClick=\"console.log('test')\">SIGN UP</a> Text 3C",
+        "<a href=\"#\" onClick=\"console.log('test')\">SIGN UP</a> Text 4D"
       ],
-    "chances": 
-      [10,10,30,50],
-    "id": 3
+      "chances": [10, 10, 30, 50],
+      "id": 4
     }
   ]
 }
