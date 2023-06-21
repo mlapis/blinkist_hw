@@ -17,7 +17,7 @@ describe("AbContentBlocks.vue", () => {
             "Never first",
             "Always second",
           ],
-          chances: [100, 0],
+          chances: [0, 100],
           id: 1,
         },
       ];
