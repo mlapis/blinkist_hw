@@ -14,7 +14,7 @@ import { useCookie } from "vue-cookie-next";
 
 interface Block {
   variants: string[];
-  chosenVariant: number | undefined;
+  chosenVariant?: number;
   chances: number[];
   id: number;
 }
