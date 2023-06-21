@@ -20,6 +20,12 @@ interface Block {
 }
 
 export default defineComponent({
+  props: {
+    fetchData: {
+      type: Function,
+      default: () => [],
+    },
+  },
   data() {
     return {
       blocks: [] as Block[],
@@ -31,22 +37,11 @@ export default defineComponent({
     return { setCookie, getCookie };
   },
   async created() {
-    await this.fetchData();
+    this.blocks = await this.fetchData();
     this.setChosenVariants();
     trackPageview({ url: location.href, chosenVariants: this.chosenVariants });
   },
   methods: {
-    async fetchData() {
-      try {
-        const response = await fetch("http://localhost:3000/blocks");
-        if (!response.ok) {
-          throw new Error("Error fetching data");
-        }
-        this.blocks = await response.json();
-      } catch (error) {
-        console.error(error);
-      }
-    },
     setChosenVariants() {
       this.chosenVariants = JSON.parse(this.getCookie("chosenVariants")) || [];
       if (this.chosenVariants.length === 0) {

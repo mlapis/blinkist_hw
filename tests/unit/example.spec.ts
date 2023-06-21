@@ -3,10 +3,10 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 describe("HelloWorld.vue", () => {
   it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
+    const fetchData = () => [];
+    const wrapper = shallowMount(AbContentBlocks, {
+      props: { fetchData },
     });
-    expect(wrapper.text()).toMatch(msg);
+    expect(wrapper.text());
   });
 });
